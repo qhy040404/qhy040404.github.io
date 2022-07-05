@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小压缩 / Compress</title>
+    <script src="js/compress.js"></script>
+    <!--suppress SpellCheckingInspection -->
+    <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+    <script src="js/utils.js"></script>
+</head>
+<body>
+<h1>base64图片压缩器</h1>
+输入原始数据 / Original Data:<br>
+<input type="text" id="origin" name="origin">
+<br>输入最大宽度 / Max Width：<br>
+<input type="text" id="w" name="width">
+<br>输入最大可接受的大小 (KB) / Max Size (KB):<br>
+<input type="text" id="m" name="size">
+<br><br>
+<button type="button" id="convert">压缩 / Compress</button>
+<br><br>
+<input type="text" id="foo" name="output" readonly="readonly">
+<button class="cp_btn" type="button" id="c" name="copy" data-clipboard-target="#foo">
+    复制至剪贴板 / Copy to clipboard
+</button>
+<script type="text/javascript">
+    const button = document.getElementById("convert");
+    button.onclick = function () {
+        let a = document.getElementById("origin").value;
+        let w = document.getElementById("w").value;
+        let m = document.getElementById("m").value;
+        if (!is_e(a) && !is_e(w) && !is_e(m) && is_valid(a)) {
+            dealImage(a, w, m, output);
+        } else {
+            output("Error");
+        }
+    }
+
+    function output(base64) {
+        const b = document.getElementById("foo");
+        b.value = base64;
+    }
+</script>
+<script type="text/javascript">
+    const clipboard = new ClipboardJS('.cp_btn');
+    clipboard.on('success', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+    });
+
+    clipboard.on('error', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+    });
+</script>
+</body>
+</html>
