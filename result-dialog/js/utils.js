@@ -5,5 +5,5 @@ const button=document.getElementById("insertv");
     }
     function output(str) { 
         const b=document.getElementById("zy"); 
-        b.innerHTML=str; 
+        b.innerText=str; 
         }
