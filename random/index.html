@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random generator</title>
+</head>
+<body>
+<script src="js/utils.js"></script>
+最大值:
+<input type="number" id="max" name="max">
+<button type="button" id="generate">计算</button>
+<div id="result"></div>
+<script type="text/javascript">
+    document.getElementById("generate").onclick = function () {
+        const a = document.getElementById("max").value;
+        document.getElementById("result").innerText = generateRandomData(a)
+    }
+</script>
+</body>
+</html>
