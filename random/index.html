@@ -8,12 +8,16 @@
 <script src="js/utils.js"></script>
 最大值:
 <input type="number" id="max" name="max">
+<br>
+保留小数 (留空为不进行四舍五入):
+<input type="number" id="fix" name="fix">
 <button type="button" id="generate">计算</button>
 <div id="result"></div>
 <script type="text/javascript">
     document.getElementById("generate").onclick = function () {
         const a = document.getElementById("max").value;
-        document.getElementById("result").innerText = generateRandomData(a)
+        const f = document.getElementById("fix").value;
+        document.getElementById("result").innerText = generateRandomData(a, f)
     }
 </script>
 </body>
