@@ -11,16 +11,16 @@
 <body>
 <h1>base64图片压缩器</h1>
 输入原始数据 / Original Data:<br>
-<input type="text" id="origin" name="origin">
+<input id="origin" name="origin" type="text">
 <br>输入最大宽度 / Max Width：<br>
-<input type="text" id="w" name="width">
+<input id="w" name="width" type="text">
 <br>输入最大可接受的大小 (KB) / Max Size (KB):<br>
-<input type="text" id="m" name="size">
+<input id="m" name="size" type="text">
 <br><br>
-<button type="button" id="convert">压缩 / Compress</button>
+<button id="convert" type="button">压缩 / Compress</button>
 <br><br>
-<input type="text" id="foo" name="output" readonly="readonly">
-<button class="cp_btn" type="button" id="c" name="copy" data-clipboard-target="#foo">
+<input id="foo" name="output" readonly="readonly" type="text">
+<button class="cp_btn" data-clipboard-target="#foo" id="c" name="copy" type="button">
     复制至剪贴板 / Copy to clipboard
 </button>
 <script type="text/javascript">
