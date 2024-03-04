@@ -9,6 +9,6 @@
 		Publisher="CN=SignPath Foundation, O=SignPath Foundation, L=Lewes, S=Delaware, C=US"
 		Version="1.9.7.0"
 		ProcessorArchitecture="x64"
-		Uri="https://github.com/DGP-Studio/Snap.Hutao/releases/download/1.9.7/Snap.Hutao.1.9.7.msix" />
+		Uri="https://api.snapgenshin.com/patch/hutao/download" />
 
 </AppInstaller>
