@@ -2,7 +2,7 @@
 <AppInstaller
 	xmlns="http://schemas.microsoft.com/appx/appinstaller/2018"
 	Version="1.0.0.0"
-	Uri="https://translucenttb.github.io/TranslucentTB.appinstaller">
+	Uri="https://qhy040404.github.io/Snap.Hutao.1.9.7.appinstaller">
 
 	<MainPackage
 		Name="60568DGPStudio.SnapHutao"
